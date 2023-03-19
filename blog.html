@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Quiz Hero</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              common: ["Rubik", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-white font-common">
+    <!-- Header/Navbar section start -->
+    <header class="h-16 flex items-center shadow-sm">
+      <nav class="flex justify-between items-center w-9/12 mx-auto">
+        <div class="text-zinc-800 font-bold uppercase">
+          <h1 class="text-lg">Quiz <span class="text-green-700">HERO</span></h1>
+          <p class="text-[10px] font-normal capitalize -mt-1">
+            Get ready to Quiz and be amazed!
+          </p>
+        </div>
+        <a
+          href="./blog.html"
+          class="bg-green-600 font-light text-sm px-5 py-1 rounded text-white"
+        >
+          Blog
+        </a>
+      </nav>
+    </header>
+    <!-- Header/Navbar section end -->
+
+    <!-- Landing page content start -->
+    <section
+      class="lg:w-9/12 md:w-[90%] w-[95%] mx-auto text-center"
+      id="rulesContainer"
+    >
+      <h1 class="text-center my-8 text-xl">Welcome to Quiz Hero Blog</h1>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="border p-4 rounded shadow-sm text-left">
+          <h2 class="text-2xl font-bold">
+            Difference between map(),filter(),forEach(),find() in javascript
+          </h2>
+          <p>
+            <strong>Map: </strong>
+            The map() method take an arry and apply a function for each element
+            of the array then create a new array of the result. map method
+            alwasys return a new array but never change the original array<br />
+            <code class="bg-slate-100">
+              const numbers = [1, 2, 3, 4]; const doubledNumbers =
+              numbers.map(num => num * 2); console.log(doubledNumbers); //
+              Output: [2, 4, 6, 8]
+            </code>
+          </p>
+          <p class="pt-3">
+            <strong>Filter: </strong>
+            The filter() method take an arry and apply a function for each
+            element of the array then create a new array of if passes the
+            condition. filter method alwasys return a new array but never change
+            the original array<br />
+
+            <code class="bg-slate-100">
+              const numbers = [1, 2, 3, 4]; const evenNumbers =
+              numbers.filter(num => num % 2 === 0); console.log(evenNumbers); //
+              Output: [2, 4]
+            </code>
+          </p>
+          <p class="pt-3">
+            <strong>ForEach: </strong>
+            The forEach() method take an arry and apply a function for each
+            element of the array.The forEach() function does not return
+            anything.<br />
+
+            <code class="bg-slate-100">
+              const numbers = [1, 2, 3, 4]; numbers.forEach(num =>
+              console.log(num)); // Output: 1, 2, 3, 4
+            </code>
+          </p>
+          <p class="pt-3">
+            <strong>Find: </strong>
+            The find() method take an arry and apply a function for each element
+            return the first matching element.If no element found it return
+            undefined. Never change original array<br />
+
+            <code class="bg-slate-100">
+              const numbers = [1, 2, 3, 4]; const evenNumber = numbers.find(num
+              => num % 2 === 0); console.log(evenNumber); // Output: 2
+            </code>
+          </p>
+        </div>
+        <div class="border p-4 rounded shadow-sm text-left">
+          <h2 class="text-2xl font-bold">
+            What is difference between session,Cookies and localStorage?
+          </h2>
+          <p>
+            <strong>localStorage </strong>
+            localStorage allow to store data inside bvrowser as key value. It
+            allow to store any type of data it can be premetive or object data.
+            it allow to store data permanently untile we change<br />
+            <code class="bg-slate-100">
+              localStorage.setItem('username', 'John'); const username =
+              localStorage.getItem('username'); console.log(username); //
+              Output: John
+            </code>
+          </p>
+          <p class="pt-3">
+            <strong>sessionStorage: </strong>
+            sessionStorage allow to store data inside bvrowser as key value. It
+            allow to store any type of data it can be premetive or object data.
+            it allow to store data in current session.<br />
+
+            <code class="bg-slate-100">
+              sessionStorage.setItem('theme', 'dark'); const theme =
+              sessionStorage.getItem('theme'); console.log(theme); // Output:
+              dark
+            </code>
+          </p>
+          <p class="pt-3">
+            <strong>Cookies </strong>
+            It is a way to store small amounts of data in the browser that can
+            be accessed by both the server and the client.Cookies have an
+            expiration date and can be set to be either persistent or
+            session-only. Cookies are commonly used to store user preferences,
+            login credentials, and tracking information.<br />
+
+            <code class="bg-slate-100">
+              document.cookie = 'username=John Doe; expires=Thu, 16 Mar 2023
+              12:00:00 UTC'; const cookies = document.cookie.split(';');
+              console.log(cookies); // Output: ["username=John Doe"]
+            </code>
+          </p>
+        </div>
+        <div class="border p-4 rounded shadow-sm text-left">
+          <h2 class="text-2xl font-bold">
+            What is an event loop in JavaScript?
+          </h2>
+          <p>
+            In JavaScript, the event loop is a way that handle execution of code
+            in a single-threaded environment JavaScript is a single-threaded
+            language, meaning that it can only execute one task at a time.
+            However, many tasks in JavaScript are asynchronous, meaning that
+            they do not complete immediately and require some time to complete,
+            such as fetching data from an API or waiting for user input. The
+            event loop is what allows JavaScript to manage these asynchronous
+            tasks.
+          </p>
+        </div>
+        <div class="border p-4 rounded shadow-sm text-left">
+          <h2 class="text-2xl font-bold">quizTimer() explained</h2>
+          <p>
+            In the quizeTimer there is a setinterVal functionality that start
+            the application timing. The quizTimer take a parameter check and
+            stop the intervale.
+          </p>
+        </div>
+        <div class="border p-4 rounded shadow-sm text-left">
+          <h2 class="text-2xl font-bold">chooseQuiz() explained</h2>
+          <p>
+            This code defines a function chooseQuiz that takes two parameters:
+            an index and a given answer. The purpose of this function is to
+            store the user's answers to a quiz and display them. First, the
+            function checks whether the given quiz has already been answered by
+            searching for an object in the answers array with the same id as the
+            current quiz using the find() method. If an object is found, it
+            means that the quiz has already been answered, so the function loops
+            through the answers array using a for...of loop and finds the index
+            of the object with the same id as the current quiz. Once the index
+            is found, the function replaces the existing object with a new
+            object that has the updated givenAns property using the splice()
+            method. If the quiz has not been answered yet, the function pushes a
+            new object with the quiz data and the given answer to the answers
+            array using the push() method. Finally, the function calls the
+            displayAnswers function with the answers array as an argument to
+            display the user's answers on the screen. Overall, this function is
+            used to keep track of the user's quiz answers and update them as the
+            user progresses through the quiz.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top bar of question page end -->
+
+    <!-- Footer section start -->
+    <footer class="py-10 text-center text-sm">
+      Copyright © 2023 Quiz Hero All Rights Reserved.
+    </footer>
+    <!-- Footer section end -->
+  </body>
+</html>
